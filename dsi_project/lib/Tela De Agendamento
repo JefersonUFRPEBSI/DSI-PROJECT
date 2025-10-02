@@ -102,4 +102,26 @@ class _AgendamentoScreenState extends State<AgendamentoScreen> {
                     child: ListTile(
                       title: Text('Hora: ${_horaSelecionada.format(context)}'),
                       trailing: Icon(Icons.access_time),
-                      onTap: () => _selecionarH
+                      onTap: () => _selecionarHora(context),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 20),
+              Center(
+                child: ElevatedButton(
+                  onPressed: _salvarAgendamento,
+                  child: Text('Salvar Agendamento'),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.green,
+                    padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
